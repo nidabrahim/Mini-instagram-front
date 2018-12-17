@@ -1,0 +1,89 @@
+.header{
+  background: #f1f1f1;
+}
+.search {
+  width: 100%;
+  position: relative
+}
+.post .profile img{
+    border-radius: 50%;
+}
+.post .profile .name{
+    vertical-align: center;
+    line-height: 35px;
+    margin-left: 10px;
+}
+
+.post .profile{
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-left: 10px;
+    padding: 5px;
+}
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.wrapper {
+  display: flex;
+}
+.wrapper > div {
+  color: black;
+  margin: .1em;
+  padding: .3em;
+  border-radius: 3px;
+  flex: 1;
+}
+.searchDiv{
+  text-align: center;
+}
+
+.iconDiv{
+  text-align: right;
+}
+
+.posts{
+    justify-content: center;
+  align-items: center;
+  text-align: center;
+    padding: 5px;
+    display: inline-block;
+}
+
+.post{
+    display: inline-block;
+    text-align: left;
+    align-self: center;
+    width: 400px;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.39);
+    -moz-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.39);
+    box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.39);
+    border-radius: 3px;
+    margin: 15px;
+}
