@@ -68,22 +68,161 @@
 }
 
 .posts{
-    justify-content: center;
+    /* justify-content: center;
   align-items: center;
   text-align: center;
     padding: 5px;
-    display: inline-block;
+    display: inline-block; */
+
+    flex-grow: 1;
+    margin: 0 auto 30px;
+    max-width: 935px;
+    width: 85%;
+    box-sizing: content-box;
+    padding: 60px 20px 0;
+    /* width: calc(100% - 40px); */
 }
 
 .post{
     display: inline-block;
     text-align: left;
     align-self: center;
-    width: 400px;
+    /* width: 437px; */
+    /*width: 46%; /* user*/
+    /* width: 30%; */
     background-color: #f1f1f1;
-    -webkit-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.39);
+    /* -webkit-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.39);
     -moz-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.39);
-    box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.39);
+    box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.39); */
     border-radius: 3px;
-    margin: 15px;
+    margin: 4px;
+}
+
+.btn-container{
+  line-height: 2em;
+}
+
+.btn-container > div{
+  float:left;
+  margin-left: 40px
+}
+
+.btn-container > div > a{
+  text-decoration: none;
+}
+
+.main-container{
+  background-color: #fafafa;
+}
+
+.miniprofile-container{
+  margin-bottom: 44px;
+  height: 180px;
+  border-bottom: 1px solid #efefef;
+}
+
+.photo-container{
+  width: 35%;
+  float: left;
+}
+
+.photo-container > img{
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto 
+}
+
+.post > img:hover{
+  cursor: pointer;
+}
+.miniprofile-content{
+  width: 65%;
+  float: right;
+}
+
+.username{
+  display: inline;
+  font-weight: 600;
+}
+
+.pseudo{
+  align-items: center;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.pseudo > h1{
+  margin: 0;
+  float: left;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.pseudo > button{
+  background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-left: 20px;
+}
+
+.all-posts{
+  flex-grow: 1;
+  margin: 0 auto 30px;
+  width: 100%;
+  box-sizing: content-box;
+  padding: 60px 20px 0;
+  max-width: 73%;
+}
+
+.pic-popup > img{
+  margin: 20px;
+}
+
+.popup-container{
+  width: 800px;
+}
+
+.comment-container{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.reaction{
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 12px;
+  height: 25px;
+}
+
+.reaction > span{
+  margin-right: 10px;
+}
+
+.img-container > img{
+  border-radius: 50%;
+}
+
+.img-container{
+  float: left;
+  margin-right: 10px;
+  padding: 7px;
+}
+
+.profile{
+  background-color: #fafafa;
+}
+
+.comment-item{
+  padding: 10px;
+}
+
+.comment-content{
+  font-size: 11px;
+}
+
+.name{
+  font-size: 15px;
 }

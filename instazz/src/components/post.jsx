@@ -1,22 +1,43 @@
 import React, { Component } from 'react';
-import Sample from '../assets/images/sample.jpg';
+import Images from '../assets/images/images.jpg';
+import Modal from 'react-responsive-modal';
+import Avatar from '../assets/images/avatar.jpg';
+import Comment from './comment';
 
 export default class Post extends Component {
-    render() {
-        return (
-            <div className="post">
-                <div className="profile">
-                    <img alt="profile" src={Sample} width="35px" height="35px"/>
-                    <span className="name">
-                        Reda
-                    </span>
-                </div>
-                <img src={Sample} alt="post" width="400px"/>
-                <div className="Comments">
-                    <div className="Comment">
 
+    constructor(props) {
+        super(props);
+    }
+
+    state = {
+        open: false,
+    };
+    
+    onOpenModal = () => {
+        this.setState({ open: true });
+    };
+    
+    onCloseModal = () => {
+        this.setState({ open: false });
+    };
+
+    render() {
+        const { open } = this.state;
+        return (
+            <div className="post" style={{width: `${this.props.width}`}}>
+
+                <img src={Images} alt="post" width="100%" onClick={this.onOpenModal} />
+
+                <Modal open={open} onClose={this.onCloseModal} center>
+                    <div className="popup-container">
+                        <div className="pic-popup" >
+                            <img src={Images} alt="post" width="95%"/>
+                        </div>
+                        <Comment/>
                     </div>
-                </div>
+                </Modal>
+
             </div>
         );
     }
