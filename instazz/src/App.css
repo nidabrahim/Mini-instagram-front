@@ -226,3 +226,17 @@
 .name{
   font-size: 15px;
 }
+
+.title{
+  font-size: 15px;
+}
+
+.desc{
+  font-size: 11px;
+}
+
+.post-description{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}

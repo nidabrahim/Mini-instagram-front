@@ -26,13 +26,21 @@ export default class Post extends Component {
         const { open } = this.state;
         return (
             <div className="post" style={{width: `${this.props.width}`}}>
-
+            
                 <img src={Images} alt="post" width="100%" onClick={this.onOpenModal} />
 
                 <Modal open={open} onClose={this.onCloseModal} center>
                     <div className="popup-container">
                         <div className="pic-popup" >
                             <img src={Images} alt="post" width="95%"/>
+                        </div>
+                        <div className="post-description">
+                            <span className="title">
+                                {this.props.post.title}
+                            </span>
+                            <div className="desc" >
+                                {this.props.post.description}
+                            </div>
                         </div>
                         <Comment/>
                     </div>
