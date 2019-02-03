@@ -159,7 +159,7 @@
   font-weight: 300;
 }
 
-.pseudo > button{
+.insta-btn{
   background-color: #ffffff;
     color: #000000;
     border: 1px solid #cccccc;
@@ -182,7 +182,7 @@
 }
 
 .popup-container{
-  width: 800px;
+  width: 760px;
 }
 
 .comment-container{
@@ -239,4 +239,16 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 10px;
+}
+
+.App {
+  margin-top: 15px;
+}
+
+.App .navbar-brand {
+  font-weight: bold;
+}
+
+.container{
+  max-width: 100%!important;
 }
