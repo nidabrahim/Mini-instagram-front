@@ -53,7 +53,6 @@ class App extends Component {
                     <form>
                     <FormGroup
                         controlId="formBasicText"
-                        
                         >
                         <FormControl
                             type="text"
@@ -65,7 +64,12 @@ class App extends Component {
                 </div>
                 <div className="btn-container">
                     {this.state.isAuthenticated
-                      ? <NavItem onClick={this.handleLogout}>Logout</NavItem>
+                      ? 
+                        <Fragment>
+                          <div><Link to="/explore">Explore</Link></div>
+                          <div><Link to="/profile">Profile</Link></div>
+                          <NavItem onClick={this.handleLogout}>Logout</NavItem>
+                        </Fragment>
                       : <Fragment>
                           <div><Link to="/signup">Signup</Link></div>
                           <div><Link to="/login">Login</Link></div>

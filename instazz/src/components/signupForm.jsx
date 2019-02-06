@@ -33,7 +33,7 @@ export default class signupForm extends Component {
 
     const config = {
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/json'
       }
     }
 
@@ -43,7 +43,7 @@ export default class signupForm extends Component {
         email: this.state.email,
         password: this.state.password
     };
-
+    console.log(user);
     API.post(`signup`, user, config)
       .then(res => {
         console.log(user);

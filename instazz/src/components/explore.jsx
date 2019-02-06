@@ -12,10 +12,16 @@ export default class Explore extends Component {
       }
 
     componentDidMount(){
-        API.get("posts")
+        const access_token = localStorage.getItem("token");
+        const config = {
+          headers: {
+            Authorization: access_token,
+            'Content-Type': 'application/json'
+          }
+        }
+        API.get("posts", config)
         .then(res => {
             const posts = res.data.posts;
-            console.log(posts);
             this.setState({ posts });
         })
         .catch(function (error) {

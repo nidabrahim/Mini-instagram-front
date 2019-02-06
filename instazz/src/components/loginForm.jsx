@@ -37,14 +37,15 @@ export default class LoginForm extends Component {
       }
     }
 
-    const post = {
+    const user = {
         email: this.state.email,
         password: this.state.password
     };
 
-    API.post(`login`, post, config)
+    API.post(`login`, user, config)
       .then(res => {
         localStorage.setItem("token", res.data.token);
+        localStorage.setItem("user", res.data.user);
         this.props.userHasAuthenticated(true);
         this.props.history.push("/user");
       })

@@ -10,14 +10,23 @@ export default class PostList extends Component {
   }
 
   componentDidMount(){
-        API.get("posts")
-      .then(res => {
-          const posts = res.data.posts;
-          this.setState({ posts });
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
+    const access_token = localStorage.getItem("token");
+    const user_id = localStorage.getItem("user");
+    const config = {
+      headers: {
+        Authorization: access_token,
+        'Content-Type': 'application/json'
+      }
+    }
+    //Posts by user
+    API.get("posts",config)
+    .then(res => {
+        const posts = res.data.posts;
+        this.setState({ posts });
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
   }
 
   handleSubmit = event => {
