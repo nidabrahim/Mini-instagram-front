@@ -27,13 +27,12 @@ export default class LoginForm extends Component {
     });
   }
 
-
   handleSubmit = event => {
     event.preventDefault();
 
     const config = {
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/json'
       }
     }
 
@@ -45,7 +44,6 @@ export default class LoginForm extends Component {
     API.post(`login`, user, config)
       .then(res => {
         localStorage.setItem("token", res.data.token);
-        localStorage.setItem("user", res.data.user);
         this.props.userHasAuthenticated(true);
         this.props.history.push("/user");
       })

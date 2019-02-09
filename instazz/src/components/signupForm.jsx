@@ -43,10 +43,9 @@ export default class signupForm extends Component {
         email: this.state.email,
         password: this.state.password
     };
-    console.log(user);
+    
     API.post(`signup`, user, config)
       .then(res => {
-        console.log(user);
         this.props.history.push("/login");
       })
       .catch((error) => {

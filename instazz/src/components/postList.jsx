@@ -11,7 +11,7 @@ export default class PostList extends Component {
 
   componentDidMount(){
     const access_token = localStorage.getItem("token");
-    const user_id = localStorage.getItem("user");
+
     const config = {
       headers: {
         Authorization: access_token,
