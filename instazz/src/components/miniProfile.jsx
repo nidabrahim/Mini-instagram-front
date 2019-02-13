@@ -3,7 +3,7 @@ import Avatar from '../assets/images/avatar.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Modal from 'react-responsive-modal';
-import PostForm from './postForm';
+import ConnectedPostForm from './postForm';
 import API from '../api';
 import { UserConsumer } from './../providers/userProvider'
 
@@ -15,7 +15,6 @@ export default class MiniProfile extends Component {
 
     state = {
         open: false,
-        // user: {}
     };
     
     onOpenModal = () => {
@@ -25,26 +24,6 @@ export default class MiniProfile extends Component {
     onCloseModal = () => {
         this.setState({ open: false });
     };
-
-    // componentDidMount(){
-    //     const access_token = localStorage.getItem("token");
-
-    //     const config = {
-    //       headers: {
-    //         Authorization: access_token,
-    //         'Content-Type': 'application/json'
-    //       }
-    //     }
-
-    //     API.get("me", config)
-    //     .then(res => {
-    //         const user = res.data.user;
-    //         this.setState({ user });
-    //     })
-    //     .catch(function (error) {
-    //       console.log(error);
-    //     })
-    // }
 
     render() {
         const { open } = this.state;
@@ -62,7 +41,7 @@ export default class MiniProfile extends Component {
                             <button className="insta-btn" type="button" onClick={this.onOpenModal} ><FontAwesomeIcon icon={faPlus} /></button>
                             <Modal open={open} onClose={this.onCloseModal} center>
                                 <div className="popup-container">
-                                    <PostForm onHide={this.onCloseModal} />
+                                    <ConnectedPostForm onHide={this.onCloseModal} />
                                 </div>
                             </Modal>
                         </div>

@@ -1,32 +1,32 @@
 import React, { Component } from 'react';
 import Post from "./post";
 import API from '../api';
+import { UserConsumer } from './../providers/userProvider'
 
 
 export default class PostList extends Component {
 
   state = {
-    posts : []
   }
 
   componentDidMount(){
     const access_token = localStorage.getItem("token");
 
-    const config = {
-      headers: {
-        Authorization: access_token,
-        'Content-Type': 'application/json'
-      }
-    }
-    //Posts by user
-    API.get("posts",config)
-    .then(res => {
-        const posts = res.data.posts;
-        this.setState({ posts });
-    })
-    .catch(function (error) {
-      console.log(error);
-    })
+    // const config = {
+    //   headers: {
+    //     Authorization: access_token,
+    //     'Content-Type': 'application/json'
+    //   }
+    // }
+    // //Posts by user
+    // API.get("posts",config)
+    // .then(res => {
+    //     const posts = res.data.posts;
+    //     this.setState({ posts });
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // })
   }
 
   handleSubmit = event => {
@@ -41,9 +41,14 @@ export default class PostList extends Component {
 
   render() {
     return (
-        <div className="post-list">
-            { this.state.posts.map(post => <Post width="46%" post={post} />)}
-        </div>
+      <UserConsumer>
+        {({ posts }) => (
+          <div className="post-list">
+              {/* { this.state.posts.map(post => <Post width="46%" post={post} />)} */}
+              { posts.map(post => <Post width="46%" post={post} />)}
+          </div>
+        )}
+      </UserConsumer>
     );
   }
 }

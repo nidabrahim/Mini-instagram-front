@@ -8,7 +8,8 @@ export const UserConsumer = UserContext.Consumer
 class UserProvider extends Component {
 
   state = {
-    user: {}
+    user: {},
+    posts: []
   }
 
   componentDidMount(){
@@ -24,11 +25,13 @@ class UserProvider extends Component {
     API.get("me", config)
     .then(res => {
       const user = res.data.user;
-      this.setState({ user });
+      const posts = user.posts;
+      this.setState({ user, posts });
     })
     .catch(function (error) {
       console.log(error);
     })
+    
   }
 
   render () {

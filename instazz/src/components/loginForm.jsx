@@ -45,7 +45,7 @@ export default class LoginForm extends Component {
       .then(res => {
         localStorage.setItem("token", res.data.token);
         this.props.userHasAuthenticated(true);
-        this.props.history.push("/user");
+        this.props.history.push("/profile");
       })
       .catch((error) => {
         console.log(error);

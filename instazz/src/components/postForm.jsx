@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 import API from '../api';
 import MyUploader from './myUploader'
+import { UserConsumer } from './../providers/userProvider'
 
-export default class PostForm extends React.Component {
+class PostForm extends React.Component {
 
   state = {
     title: '',
-    description: ''
+    description: '',
+    author: this.props.author
   }
 
   getValidationState(){
@@ -15,7 +17,8 @@ export default class PostForm extends React.Component {
   }
 
   handleChange = event => {
-    const target = event.target;;
+   
+    const target = event.target;
     if(target.type === 'text'){
       this.setState({ title: event.target.value });
     }
@@ -26,21 +29,25 @@ export default class PostForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    const access_token = localStorage.getItem("token");
 
     const config = {
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        Authorization: access_token,
+        'Content-Type': 'application/json'
       }
     }
 
     const post = {
         title: this.state.title,
-        description: this.state.description
+        description: this.state.description,
+        hidden: false,
+        author: this.state.author
     };
 
-    API.post(`posts`, post, config)
+    API.post('post/add', post, config)
       .then(res => {
-        this.props.onHide()
+        this.props.onHide();
         console.log(res);
         console.log(res.data);
       })
@@ -50,21 +57,10 @@ export default class PostForm extends React.Component {
   }
 
   render() {
+    console.log("hi ");
+    console.log(this.state.author);
     return (
       <div>
-        {/* <form onSubmit={this.handleSubmit}>
-          <label>
-              title:
-              <input type="text" name="title" onChange={this.handleChange} />
-          </label>
-          <label>
-              description:
-              <input type="text" name="description" onChange={this.handleChange} />
-          </label>
-          <div>
-            <button className="insta-btn" type="button">Save</button>
-          </div>
-        </form> */}
 
         <form onSubmit={this.handleSubmit}>
 
@@ -100,3 +96,15 @@ export default class PostForm extends React.Component {
   }
 
 }
+
+const ConnectedPostForm = props => (
+  <UserConsumer>
+    {({ user }) => (
+      <PostForm
+        {...props}
+        author={user}
+      />
+    )}
+  </UserConsumer>
+)
+export default ConnectedPostForm

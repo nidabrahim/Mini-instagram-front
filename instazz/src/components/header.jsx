@@ -54,7 +54,7 @@ export default class Header extends Component {
                     </div>
                     <div className="btn-container">
                         <div><Link to="/">Explore</Link></div>
-                        <div><Link to="/user">User</Link></div>
+                        <div><Link to="/profile">User</Link></div>
                     </div>
                 </div>
             </div>

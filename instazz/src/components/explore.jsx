@@ -19,7 +19,7 @@ export default class Explore extends Component {
             'Content-Type': 'application/json'
           }
         }
-        API.get("posts", config)
+        API.get("posts/public", config)
         .then(res => {
             const posts = res.data.posts;
             this.setState({ posts });

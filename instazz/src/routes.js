@@ -15,7 +15,7 @@ export default ({ childProps }) =>
         <AppliedRoute path="/" exact component={Explore} props={childProps} />
         <AppliedRoute path="/login" exact component={LoginForm} props={childProps} />
         <AppliedRoute path="/signup" exact component={SignupForm} props={childProps} />
-        <AppliedRoute path="/user" exact component={User} props={childProps} />
+        <AppliedRoute path="/profile" exact component={User} props={childProps} />
         <AppliedRoute path="/explore" exact component={Explore} props={childProps} />
 
         { /* Finally, catch all unmatched routes */ }
