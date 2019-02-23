@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Post from "./post";
 import API from '../api';
 import { UserConsumer } from './../providers/userProvider'
+import PostProvider from '../providers/postProvider';
 
 
 export default class PostList extends Component {
@@ -45,7 +46,7 @@ export default class PostList extends Component {
         {({ posts }) => (
           <div className="post-list">
               {/* { this.state.posts.map(post => <Post width="46%" post={post} />)} */}
-              { posts.map(post => <Post width="46%" post={post} />)}
+              { posts.map(post => <PostProvider post={post} ><Post width="46%" /></PostProvider>)}
           </div>
         )}
       </UserConsumer>

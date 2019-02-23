@@ -3,13 +3,18 @@ import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 import API from '../api';
 import MyUploader from './myUploader'
 import { UserConsumer } from './../providers/userProvider'
+import 'react-images-uploader/styles.css';
+import 'react-images-uploader/font.css';
 
 class PostForm extends React.Component {
 
   state = {
     title: '',
     description: '',
-    author: this.props.author
+    author: this.props.author,
+
+    file: '',
+    imagePreviewUrl: ''
   }
 
   getValidationState(){
@@ -19,11 +24,26 @@ class PostForm extends React.Component {
   handleChange = event => {
    
     const target = event.target;
+
     if(target.type === 'text'){
       this.setState({ title: event.target.value });
     }
     else if(target.type === 'textarea'){
       this.setState({ description: event.target.value });
+    }
+
+    if(target.files){
+      let reader = new FileReader();
+      let file = target.files[0];
+      reader.readAsDataURL(file)
+
+      reader.onload = (event) => {
+          console.log(event.target.result);
+          this.setState({
+              file: file,
+              imagePreviewUrl: reader.result
+          });
+      }
     }
   }
 
@@ -38,27 +58,47 @@ class PostForm extends React.Component {
       }
     }
 
-    const post = {
-        title: this.state.title,
-        description: this.state.description,
-        hidden: false,
-        author: this.state.author
-    };
+    const fd = new FormData();
+    fd.append('photo', this.state.file, this.state.file.name);
 
-    API.post('post/add', post, config)
-      .then(res => {
-        this.props.onHide();
-        console.log(res);
-        console.log(res.data);
-      })
-      .catch((error) => {
+    API.post('post/photo', fd, config)
+    .then(res => {
+
+        const post = {
+          title: this.state.title,
+          description: this.state.description,
+          hidden: false,
+          author: this.state.author,
+          img: res.data.filename
+        };
+
+        console.log(post);
+
+        API.post('post/add', post, config)
+        .then(result => {
+          this.props.onHide();
+          console.log(result.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+    })
+    .catch((error) => {
         console.log(error);
-      })
+    })
+
   }
 
   render() {
-    console.log("hi ");
-    console.log(this.state.author);
+
+    let {imagePreviewUrl} = this.state;
+    let $imagePreview = null;
+    if (imagePreviewUrl) {
+      $imagePreview = (<img src={imagePreviewUrl} />);
+    } else {
+      $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
+    }
+
     return (
       <div>
 
@@ -85,9 +125,23 @@ class PostForm extends React.Component {
               onChange={this.handleChange} />
             </FormGroup>
 
-          <MyUploader/>
+          {/* <MyUploader/> */}
+          <div className="previewComponent">
 
-          <Button className="insta-btn" type="submit">Submit</Button>
+            <div>
+              <input className="fileInput" 
+                type="file" name="file"
+                onChange={this.handleChange} />
+            </div>
+
+            <div className="imgPreview">
+              {$imagePreview}
+            </div>
+
+          </div>
+
+          <button className="submitButton" type="submit">Submit</button>
+          {/* <Button className="insta-btn" type="submit">Submit</Button> */}
 
         </form>
 

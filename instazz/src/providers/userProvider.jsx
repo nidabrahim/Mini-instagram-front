@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import API from './../api';
 
-const UserContext = React.createContext()
+export const UserContext = React.createContext()
 
 export const UserConsumer = UserContext.Consumer
 
