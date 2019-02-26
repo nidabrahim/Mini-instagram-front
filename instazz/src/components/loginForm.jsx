@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import API from '../api';
-import "./loginForm.css";
+//import "./loginForm.css";
 
 import { Switch, Route } from 'react-router-dom';
 import { faWindowRestore } from "@fortawesome/free-solid-svg-icons";
+
 
 
 export default class LoginForm extends Component {
@@ -55,11 +56,10 @@ export default class LoginForm extends Component {
   render() {
     return (
       <div className="Login">
-        <form onSubmit={this.handleSubmit}>
+         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel>Email</ControlLabel>
             <FormControl
-              autoFocus
               type="text"
               value={this.state.email}
               onChange={this.handleChange}
@@ -78,9 +78,11 @@ export default class LoginForm extends Component {
             bsSize="large"
             disabled={!this.validateForm()}
             type="submit"
+            className="btn btn-outline btn-xl js-scroll-trigger"
           >
             Login
           </Button>
+        
         </form>
       </div>
     );

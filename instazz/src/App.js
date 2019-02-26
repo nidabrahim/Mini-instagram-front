@@ -15,13 +15,23 @@ import { LinkContainer } from "react-router-bootstrap";
 import { FormControl, FormGroup } from 'react-bootstrap';
 import CartIcon from './assets/logos/logo.png';
 
+import 'font-awesome/css/font-awesome.css';
+
+import {FooterComponent}  from './components/FooterComponent/FooterComponent';
+import {SocialComponent} from './components/SocialComponent/SocialComponent';
+import {CallToActionComponent} from './components/CallToActionComponent/CallToActionComponent';
+import {FeaturesComponent} from './components/FeaturesComponent/FeaturesComponent';
+import {AppDownloadComponent} from './components/AppDownloadComponent/AppDownloadComponent';
+import {HeroComponent} from './components/HeroComponent/HeroComponent';
+import NavBarComponent from './components/NavBarComponent/NavBarComponent';
+
 library.add(faIgloo);
 
 class App extends Component {
 
   constructor(props) {
     super(props);
-  
+
     this.state = {
       isAuthenticated: false,
       isAuthenticating: true
@@ -63,7 +73,7 @@ class App extends Component {
                     </form>
                 </div>
                 <div className="btn-container">
-                    {this.state.isAuthenticated
+                    {/* {this.state.isAuthenticated
                       ? 
                         <Fragment>
                           <div><Link to="/explore">Explore</Link></div>
@@ -74,11 +84,11 @@ class App extends Component {
                           <div><Link to="/signup">Signup</Link></div>
                           <div><Link to="/login">Login</Link></div>
                         </Fragment>
-                    }
+                    } */}
                 </div>
             </div>
 
-            <Routes childProps={childProps} />
+            {/* <Routes childProps={childProps} /> */}
           </div>
       // <div className="App">
  
@@ -110,4 +120,5 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+// export default withRouter(App);
+export default App;

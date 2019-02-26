@@ -96,7 +96,7 @@ class PostForm extends React.Component {
     if (imagePreviewUrl) {
       $imagePreview = (<img src={imagePreviewUrl} />);
     } else {
-      $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
+      $imagePreview = (<div className="previewText"></div>);
     }
 
     return (
@@ -140,8 +140,7 @@ class PostForm extends React.Component {
 
           </div>
 
-          <button className="submitButton" type="submit">Submit</button>
-          {/* <Button className="insta-btn" type="submit">Submit</Button> */}
+          <button className="submitButton btn btn-outline btn-xl js-scroll-trigger" type="submit">Add post</button>
 
         </form>
 

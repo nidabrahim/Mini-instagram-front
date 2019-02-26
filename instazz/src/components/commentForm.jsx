@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Avatar from '../assets/images/avatar.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FormGroup, FormControl } from 'react-bootstrap';
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faComment } from "@fortawesome/free-solid-svg-icons";
 import API from '../api';
 import { UserConsumer, UserContext } from './../providers/userProvider'
 import { PostConsumer, PostContext } from '../providers/postProvider';
+import './style.css'
 
 class CommentForm extends Component {
 
@@ -45,7 +46,7 @@ class CommentForm extends Component {
                             </span>
                             <div className="comment-content" >
                                 <form onSubmit={this.handleSubmit}>
-                                    <FormGroup controlId="formBasicText" validationState={this.getValidationState()} >
+                                    <FormGroup controlId="formBasicText" className="comment-form" validationState={this.getValidationState()} >
                                         <FormControl
                                         type="text"
                                         value={this.state.value}
@@ -54,7 +55,7 @@ class CommentForm extends Component {
                                         onChange={this.handleChange} />
                                         <FormControl.Feedback />
                                     </FormGroup>
-                                    <button className="insta-btn" type="submit"><FontAwesomeIcon icon={faPlus} /></button>
+                                    <button className="insta-btn" type="submit"><FontAwesomeIcon icon={faComment} /></button>
                                 </form>
                             </div>
                         </div>

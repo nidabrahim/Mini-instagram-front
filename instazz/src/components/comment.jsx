@@ -7,6 +7,7 @@ import CommentForm from './commentForm';
 import { PostConsumer } from '../providers/postProvider';
 import ConnectedCommentForm from './commentForm';
 
+
 export default class Comment extends Component {
 
     // constructor(props) {

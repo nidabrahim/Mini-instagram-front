@@ -10,6 +10,7 @@ export default class signupForm extends Component {
 
     this.state = {
         name: "",
+        secondname: "",
         pseudo: "",
         email: "",
         password: ""
@@ -17,7 +18,7 @@ export default class signupForm extends Component {
   }
 
   validateForm() {
-    return this.state.name.length > 0 && this.state.pseudo.length > 0 
+    return this.state.name.length > 0 && this.state.secondname.length > 0 && this.state.pseudo.length > 0 
         && this.state.email.length > 0 && this.state.password.length > 0;
   }
 
@@ -39,6 +40,7 @@ export default class signupForm extends Component {
 
     const user = {
         name: this.state.name,
+        secondname: this.state.secondname,
         pseudo: this.state.pseudo,
         email: this.state.email,
         password: this.state.password
@@ -58,18 +60,24 @@ export default class signupForm extends Component {
       <div className="Login">
         <form onSubmit={this.handleSubmit}>
         <FormGroup controlId="name" bsSize="large">
-            <ControlLabel>Name</ControlLabel>
+            <ControlLabel>First name</ControlLabel>
             <FormControl
-              autoFocus
               type="text"
               value={this.state.name}
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <FormGroup controlId="secondname" bsSize="large">
+            <ControlLabel>Second name</ControlLabel>
+            <FormControl
+              type="text"
+              value={this.state.secondname}
               onChange={this.handleChange}
             />
           </FormGroup>
           <FormGroup controlId="pseudo" bsSize="large">
             <ControlLabel>Pseudo</ControlLabel>
             <FormControl
-              autoFocus
               type="text"
               value={this.state.pseudo}
               onChange={this.handleChange}
@@ -78,7 +86,6 @@ export default class signupForm extends Component {
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel>Email</ControlLabel>
             <FormControl
-              autoFocus
               type="text"
               value={this.state.email}
               onChange={this.handleChange}
@@ -97,6 +104,7 @@ export default class signupForm extends Component {
             bsSize="large"
             disabled={!this.validateForm()}
             type="submit"
+            className="btn btn-outline btn-xl js-scroll-trigger"
           >
             Sign up
           </Button>
