@@ -1,8 +1,8 @@
 {
-  "name": "instazz",
+  "name": "instafront",
   "version": "0.1.0",
-  "homepage": "http://nidabrahim.github.io/InstaFront",
   "private": true,
+  "homepage": "http://nidabrahim.github.io/InstaFront",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -10,13 +10,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nidabrahim/InstaFront.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nidabrahim/InstaFront/issues"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
@@ -51,9 +44,6 @@
     "react-viewer": "^2.8.0",
     "reactstrap": "^7.0.2",
     "simple-line-icons": "^2.4.1"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
