@@ -2,7 +2,7 @@
   "name": "instafront",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://nidabrahim.github.io/InstaFront",
+  "homepage": "https://nidabrahim.github.io/InstaFront",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
