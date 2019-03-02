@@ -4,7 +4,7 @@ import './style.css';
 export const FooterComponent = (props)=>{
   return <footer>
     <div className="container">
-      <p>&copy; 2017 Start Bootstrap. All Rights Reserved.</p>
+      <p>&copy; 2019 InstaZZ. All Rights Reserved.</p>
       <ul className="list-inline">
         <li className="list-inline-item">
           <a href="#">Privacy</a>

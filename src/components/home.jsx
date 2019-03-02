@@ -39,10 +39,8 @@ class Home extends Component {
 		// const nbs = this.state ? this.state.navBarShrink : "";
 		return (
 		  <div>
-				<HeroComponent />
-				<AppDownloadComponent />
-				<FeaturesComponent />
 				<CallToActionComponent />
+				<FeaturesComponent />
 				<SocialComponent />
 				<FooterComponent />
 		  </div>

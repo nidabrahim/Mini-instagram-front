@@ -8,24 +8,11 @@ export const FeaturesComponent = (props)=>{
     <div className="container">
       <div className="section-heading text-center">
         <h2>Unlimited Features, Unlimited Fun</h2>
-        <p className="text-muted">Check out what you can do with this app theme!</p>
+        <p className="text-muted">Check out what you can do with this platform !</p>
         <hr />
       </div>
       <div className="row">
-        <div className="col-lg-4 my-auto">
-          <div className="device-container">
-            <div className="device-mockup iphone6_plus portrait white">
-              <div className="device">
-                <div className="screen">
-                  <img src={demoScreen1} className="img-fluid" alt="" />
-                </div>
-                <div className="button">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-8 my-auto">
+        <div className="col-lg-12 my-auto">
           <div className="container-fluid">
             <div className="row">
               <div className="col-lg-6">
