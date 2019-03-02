@@ -7,9 +7,14 @@ export const UserConsumer = UserContext.Consumer
 
 class UserProvider extends Component {
 
-  state = {
-    user: {},
-    posts: []
+  constructor(props) {
+    super(props);
+
+    this.state = {
+        user: {},
+        posts: [],
+        updateUser: this.updateUser
+    }
   }
 
   componentDidMount(){
@@ -33,6 +38,10 @@ class UserProvider extends Component {
     })
     
   }
+
+  updateUser = user => {
+    this.setState({ user: user });
+  };
 
   render () {
     return (

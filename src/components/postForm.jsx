@@ -78,6 +78,8 @@ class PostForm extends React.Component {
         .then(result => {
           this.props.onHide();
           console.log(result.data);
+          const post = result.data.post;
+          this.props.posts.push(post);
         })
         .catch((error) => {
           console.log(error);
@@ -152,10 +154,11 @@ class PostForm extends React.Component {
 
 const ConnectedPostForm = props => (
   <UserConsumer>
-    {({ user }) => (
+    {({ user, posts }) => (
       <PostForm
         {...props}
         author={user}
+        posts={posts}
       />
     )}
   </UserConsumer>

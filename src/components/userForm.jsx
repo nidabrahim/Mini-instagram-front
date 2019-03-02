@@ -62,8 +62,10 @@ class UserForm extends React.Component {
 
     API.post('user/'+user._id+'/update', newUser, config)
     .then(result => {
-    this.props.onHide();
-    console.log(result.data);
+      this.props.onHide();
+      console.log(result.data);
+      const user = result.data.user;
+      this.context.updateUser(user);
     })
     .catch((error) => {
     console.log(error);
@@ -142,6 +144,7 @@ class UserForm extends React.Component {
   }
 
 }
+UserForm.contextType = UserContext;
 
 const ConnectedUserForm = props => (
     <UserConsumer>
