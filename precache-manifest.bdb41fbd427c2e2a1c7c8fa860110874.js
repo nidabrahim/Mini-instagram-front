@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "b6239c60fcca3b51b0f3b2d8e11f1af9",
-    "url": "/InstaFront/static/media/ipad_pro_port_black.b6239c60.png"
+    "revision": "f0e7b1cf8ef8f58d07f11e5e96c4a03a",
+    "url": "/InstaFront/static/media/ipad_pro_port_gold.f0e7b1cf.png"
   },
   {
-    "revision": "98d13016a5392190dc3f",
+    "revision": "f6ffab320827d6a54d10",
     "url": "/InstaFront/static/css/main.24c9823f.chunk.css"
   },
   {
@@ -64,12 +64,12 @@ self.__precacheManifest = [
     "url": "/InstaFront/static/media/Simple-Line-Icons.0cb0b9c5.woff2"
   },
   {
-    "revision": "d2285965fe34b05465047401b8595dd0",
-    "url": "/InstaFront/static/media/Simple-Line-Icons.d2285965.ttf"
-  },
-  {
     "revision": "f33df365d6d0255b586f2920355e94d7",
     "url": "/InstaFront/static/media/Simple-Line-Icons.f33df365.eot"
+  },
+  {
+    "revision": "d2285965fe34b05465047401b8595dd0",
+    "url": "/InstaFront/static/media/Simple-Line-Icons.d2285965.ttf"
   },
   {
     "revision": "78f07e2c2a535c26ef21d95e41bd7175",
@@ -108,12 +108,16 @@ self.__precacheManifest = [
     "url": "/InstaFront/static/media/silver.845604f7.png"
   },
   {
-    "revision": "6c71f01ff2b3a48c38a70a43ef9b3914",
-    "url": "/InstaFront/static/media/iphone_se_land_white.6c71f01f.png"
-  },
-  {
     "revision": "f947505c6fa2adb20690a2474736ab0a",
     "url": "/InstaFront/static/media/iphone_se_port_white.f947505c.png"
+  },
+  {
+    "revision": "f33471e2767747a3863115d7b8b980b8",
+    "url": "/InstaFront/static/media/grey.f33471e2.png"
+  },
+  {
+    "revision": "6c71f01ff2b3a48c38a70a43ef9b3914",
+    "url": "/InstaFront/static/media/iphone_se_land_white.6c71f01f.png"
   },
   {
     "revision": "0effbb6a3ffa421ab3b6da2e69fb3b0e",
@@ -124,12 +128,12 @@ self.__precacheManifest = [
     "url": "/InstaFront/static/media/s3_port_white.54ef3f95.png"
   },
   {
-    "revision": "f33471e2767747a3863115d7b8b980b8",
-    "url": "/InstaFront/static/media/grey.f33471e2.png"
-  },
-  {
     "revision": "f17bc857d0dcea6fe60775161c7bbd5e",
     "url": "/InstaFront/static/media/iphone_se_land_black.f17bc857.png"
+  },
+  {
+    "revision": "b49805dee4cc2d7b8c92d3632ba8bcb9",
+    "url": "/InstaFront/static/media/iphone_se_port_gold.b49805de.png"
   },
   {
     "revision": "8d33a7c1f6305b41c56523d5bf7e2176",
@@ -144,24 +148,20 @@ self.__precacheManifest = [
     "url": "/InstaFront/static/media/iphone_se_port_rose.664550ad.png"
   },
   {
-    "revision": "b49805dee4cc2d7b8c92d3632ba8bcb9",
-    "url": "/InstaFront/static/media/iphone_se_port_gold.b49805de.png"
+    "revision": "e392031a42566e89724cc347e2eb944e",
+    "url": "/InstaFront/static/media/iphone_se_port_black.e392031a.png"
   },
   {
     "revision": "5d4198bc85fcb3c350950f0a69ec9907",
     "url": "/InstaFront/static/media/iphone5_land_white.5d4198bc.png"
   },
   {
-    "revision": "e392031a42566e89724cc347e2eb944e",
-    "url": "/InstaFront/static/media/iphone_se_port_black.e392031a.png"
+    "revision": "b6239c60fcca3b51b0f3b2d8e11f1af9",
+    "url": "/InstaFront/static/media/ipad_pro_port_black.b6239c60.png"
   },
   {
-    "revision": "f0e7b1cf8ef8f58d07f11e5e96c4a03a",
-    "url": "/InstaFront/static/media/ipad_pro_port_gold.f0e7b1cf.png"
-  },
-  {
-    "revision": "98d13016a5392190dc3f",
-    "url": "/InstaFront/static/js/main.98d13016.chunk.js"
+    "revision": "f6ffab320827d6a54d10",
+    "url": "/InstaFront/static/js/main.f6ffab32.chunk.js"
   },
   {
     "revision": "9fb9a4146751e9b044ce14dad13588c9",
@@ -176,20 +176,20 @@ self.__precacheManifest = [
     "url": "/InstaFront/static/media/ipad_pro_land_black.94c538da.png"
   },
   {
-    "revision": "7f10264e0f100ddffd8bbdd8ac281fef",
-    "url": "/InstaFront/static/media/gold.7f10264e.png"
-  },
-  {
     "revision": "3347526fc4a1fdedcabe680c64c0e799",
     "url": "/InstaFront/static/media/iphone5_port_white.3347526f.png"
   },
   {
-    "revision": "43cbe56f89906ad1095dcb411f54ea79",
-    "url": "/InstaFront/static/media/ipad_air_2_gray_land.43cbe56f.png"
+    "revision": "7f10264e0f100ddffd8bbdd8ac281fef",
+    "url": "/InstaFront/static/media/gold.7f10264e.png"
   },
   {
     "revision": "c1ffcacd23f696e90b004e4a0c54349b",
     "url": "/InstaFront/static/media/ipad_pro_port_silver.c1ffcacd.png"
+  },
+  {
+    "revision": "43cbe56f89906ad1095dcb411f54ea79",
+    "url": "/InstaFront/static/media/ipad_air_2_gray_land.43cbe56f.png"
   },
   {
     "revision": "070f84dc1bf0ceb5b09710a62b0c044c",
@@ -204,12 +204,12 @@ self.__precacheManifest = [
     "url": "/InstaFront/static/media/ipad_air_2_gold_land.3d8f03da.png"
   },
   {
-    "revision": "18c7b36437e59d55e4c8c89898664b9c",
-    "url": "/InstaFront/static/media/ipad_air_2_gold_port.18c7b364.png"
-  },
-  {
     "revision": "cb6895ef16c1ce0b4f4d9d0ee1e3f496",
     "url": "/InstaFront/static/media/ipad_air_2_silver_port.cb6895ef.png"
+  },
+  {
+    "revision": "18c7b36437e59d55e4c8c89898664b9c",
+    "url": "/InstaFront/static/media/ipad_air_2_gold_port.18c7b364.png"
   },
   {
     "revision": "07bbd15ff3c2a1859feb82afb719e2cf",
@@ -232,12 +232,12 @@ self.__precacheManifest = [
     "url": "/InstaFront/static/media/ipad_air_gray_land.49d7d773.png"
   },
   {
-    "revision": "3aab1adee35d0ad688992735a96a52c2",
-    "url": "/InstaFront/static/media/ipad_air_gray_port.3aab1ade.png"
-  },
-  {
     "revision": "b7cbef7b31f10fb0ec94894ade316ee1",
     "url": "/InstaFront/static/media/ipad_air_silver_land.b7cbef7b.png"
+  },
+  {
+    "revision": "3aab1adee35d0ad688992735a96a52c2",
+    "url": "/InstaFront/static/media/ipad_air_gray_port.3aab1ade.png"
   },
   {
     "revision": "81078e2cf3b4fe341431f4d2f6675eed",
@@ -276,16 +276,16 @@ self.__precacheManifest = [
     "url": "/InstaFront/static/media/galaxy_s5_land_black.03b51e06.png"
   },
   {
+    "revision": "ba2ef5665e4e31ba27c939cc60589963",
+    "url": "/InstaFront/static/media/galaxy_tab4_land_white.ba2ef566.png"
+  },
+  {
     "revision": "3b0218f7b660c875ec8440fd9279df00",
     "url": "/InstaFront/static/media/iphone_6_plus_white_land.3b0218f7.png"
   },
   {
     "revision": "ae1f5e7ab3d5a28ac3a858de6764f7df",
     "url": "/InstaFront/static/media/iphone_6_plus_black_land.ae1f5e7a.png"
-  },
-  {
-    "revision": "ba2ef5665e4e31ba27c939cc60589963",
-    "url": "/InstaFront/static/media/galaxy_tab4_land_white.ba2ef566.png"
   },
   {
     "revision": "6b2944e5a402051f87606434560c7b38",
@@ -320,7 +320,7 @@ self.__precacheManifest = [
     "url": "/InstaFront/static/css/1.fa14bcbd.chunk.css"
   },
   {
-    "revision": "b1ef4009bb0a31bf172628145522311f",
+    "revision": "79fff53f9734aabb9904964e14ad8af3",
     "url": "/InstaFront/index.html"
   }
 ];
