@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Avatar from '../assets/images/avatar.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FormGroup, FormControl } from 'react-bootstrap';
 import { faComment } from "@fortawesome/free-solid-svg-icons";
-import API from '../api';
-import { UserConsumer, UserContext } from './../providers/userProvider'
-import { PostConsumer, PostContext } from '../providers/postProvider';
+import { UserConsumer } from './../providers/userProvider'
+import { PostContext } from '../providers/postProvider';
 import './style.css'
 
 class CommentForm extends Component {
@@ -79,5 +77,3 @@ const ConnectedCommentForm = props => (
 )
   
 export default ConnectedCommentForm
-
-// export default CommentForm

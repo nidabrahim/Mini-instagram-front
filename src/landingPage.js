@@ -1,20 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-//import './App.css';
-//import 'font-awesome/css/font-awesome.css';
-
-import {FooterComponent}  from './components/FooterComponent/FooterComponent';
-import {SocialComponent} from './components/SocialComponent/SocialComponent';
-import {CallToActionComponent} from './components/CallToActionComponent/CallToActionComponent';
-import {FeaturesComponent} from './components/FeaturesComponent/FeaturesComponent';
-import {AppDownloadComponent} from './components/AppDownloadComponent/AppDownloadComponent';
-import HeroComponent from './components/HeroComponent/HeroComponent';
 import NavBarComponent from './components/NavBarComponent/NavBarComponent';
 
-import { BrowserRouter as Router } from "react-router-dom";
 import Routes from './routes';
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 
 class LangingPage extends Component {
@@ -62,12 +52,6 @@ class LangingPage extends Component {
 		  <div>
 				<NavBarComponent navBarShrink = {nbs} childProps={childProps} logout={this.handleLogout} />
 				<Routes childProps={childProps}/>
-				{/* <HeroComponent />
-				{/* <AppDownloadComponent />
-				<FeaturesComponent />
-				<CallToActionComponent />
-				<SocialComponent />
-				<FooterComponent /> */} 
 		  </div>
 		);
 	  }

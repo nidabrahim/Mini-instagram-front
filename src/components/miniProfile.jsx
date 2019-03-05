@@ -4,9 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Modal from 'react-responsive-modal';
 import ConnectedPostForm from './postForm';
-import API from '../api';
 import { UserConsumer } from './../providers/userProvider'
-import UserForm from './userForm';
 import ConnectedUserForm from './userForm';
 
 export default class MiniProfile extends Component {

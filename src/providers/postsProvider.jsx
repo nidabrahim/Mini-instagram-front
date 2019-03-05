@@ -13,20 +13,7 @@ class PostsProvider extends Component {
   }
 
   updateItem = (updatedItem) => {
-      console.log(updatedItem);
-    // this.setState(state => {
-    //     const posts = state.posts.map((item, j) => {
-    //       if (updatedItem._id === item._id) {
-    //         return updatedItem;
-    //       } else {
-    //         return item;
-    //       }
-    //     });
-  
-    //     return {
-    //         posts,
-    //     };
-    //   });
+    console.log(updatedItem);
   };
 
   componentDidMount(){

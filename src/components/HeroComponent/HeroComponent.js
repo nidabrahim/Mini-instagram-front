@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './style.css';
 import '../../device-mockups/device-mockups.css'
 import demoScreen1 from '../../demo-screen-1.jpg';
-import Routes from '../../routes';
 
 class HeroComponent extends Component {
 

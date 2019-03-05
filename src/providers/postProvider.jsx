@@ -17,24 +17,6 @@ class PostProvider extends Component {
         }
     }
 
-    componentDidMount() {
-        // const access_token = localStorage.getItem("token");
-        // const config = {
-        //     headers: {
-        //     Authorization: access_token,
-        //     'Content-Type': 'application/json'
-        //     }
-        // }
-        // API.get('post/'+this.state.post._id, config)
-        // .then(res => {
-        //     this.setState({ post: res.data.post });
-        // })
-        // .catch((error) => {
-        //     console.log(error);
-        // })
-
-    }
-
     updateLike = post => {
         const access_token = localStorage.getItem("token");
         const config = {
@@ -63,10 +45,7 @@ class PostProvider extends Component {
             'Content-Type': 'application/json'
           }
         }
-        // const comment = {
-        //     body: this.state.body,
-        //     author: this.state.author
-        // };
+
         API.post('post/'+this.state.post._id+'/comments/add', comment, config)
           .then(res => {
             this.setState({ post: res.data.post });

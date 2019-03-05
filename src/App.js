@@ -1,29 +1,11 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faIgloo } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Header from "./components/header";
-import Explore from "./components/explore";
-import User from "./components/user";
-import LoginForm from "./components/loginForm";
-import SignupForm from "./components/signupForm";
-import { Link, withRouter } from "react-router-dom";
-import Routes from "./routes"
-import { Nav, Navbar, NavItem } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import { FormControl, FormGroup } from 'react-bootstrap';
 import CartIcon from './assets/logos/logo.png';
 
 import 'font-awesome/css/font-awesome.css';
-
-import {FooterComponent}  from './components/FooterComponent/FooterComponent';
-import {SocialComponent} from './components/SocialComponent/SocialComponent';
-import {CallToActionComponent} from './components/CallToActionComponent/CallToActionComponent';
-import {FeaturesComponent} from './components/FeaturesComponent/FeaturesComponent';
-import {AppDownloadComponent} from './components/AppDownloadComponent/AppDownloadComponent';
-import {HeroComponent} from './components/HeroComponent/HeroComponent';
-import NavBarComponent from './components/NavBarComponent/NavBarComponent';
 
 library.add(faIgloo);
 
@@ -73,52 +55,11 @@ class App extends Component {
                     </form>
                 </div>
                 <div className="btn-container">
-                    {/* {this.state.isAuthenticated
-                      ? 
-                        <Fragment>
-                          <div><Link to="/explore">Explore</Link></div>
-                          <div><Link to="/profile">Profile</Link></div>
-                          <NavItem onClick={this.handleLogout}>Logout</NavItem>
-                        </Fragment>
-                      : <Fragment>
-                          <div><Link to="/signup">Signup</Link></div>
-                          <div><Link to="/login">Login</Link></div>
-                        </Fragment>
-                    } */}
                 </div>
             </div>
-
-            {/* <Routes childProps={childProps} /> */}
           </div>
-      // <div className="App">
- 
-      //       <div className="main">
-      //         <Navbar fluid collapseOnSelect>
-      //           <Navbar.Header>
-      //             <Navbar.Brand>
-      //               <Link to="/">InstaZZ</Link>
-      //             </Navbar.Brand>
-      //             <Navbar.Toggle />
-      //           </Navbar.Header>
-      //         </Navbar>
-      //         <Routes />
-      //           {/* <LoginForm/>
-      //           <SignupForm/>
-      //           <Route path="/user" component={User} /> */}
-      //       </div>
-
-      
-      //     {/* <Router>
-      //       <div className="main">
-      //           <Header/>
-      //           <Route exact path="/" component={Explore} />
-      //           <Route path="/user" component={User} />
-      //       </div>
-      //     </Router> */}
-      // </div>
     );
   }
 }
 
-// export default withRouter(App);
 export default App;

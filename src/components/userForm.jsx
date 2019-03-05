@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
+import React from 'react';
+import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 import API from '../api';
-import { UserConsumer, UserContext } from './../providers/userProvider'
+import { UserConsumer, UserContext } from './../providers/userProvider';
 import 'react-images-uploader/styles.css';
 import 'react-images-uploader/font.css';
 
@@ -63,12 +63,11 @@ class UserForm extends React.Component {
     API.post('user/'+user._id+'/update', newUser, config)
     .then(result => {
       this.props.onHide();
-      console.log(result.data);
       const user = result.data.user;
       this.context.updateUser(user);
     })
     .catch((error) => {
-    console.log(error);
+      console.log(error);
     })
 
   }

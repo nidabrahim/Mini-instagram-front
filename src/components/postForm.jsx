@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
+import React from 'react';
+import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 import API from '../api';
-import MyUploader from './myUploader'
 import { UserConsumer } from './../providers/userProvider'
 import 'react-images-uploader/styles.css';
 import 'react-images-uploader/font.css';
@@ -127,7 +126,6 @@ class PostForm extends React.Component {
               onChange={this.handleChange} />
             </FormGroup>
 
-          {/* <MyUploader/> */}
           <div className="previewComponent">
 
             <div>

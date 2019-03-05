@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ImagesUploader from 'react-images-uploader';
 import 'react-images-uploader/styles.css';
 import 'react-images-uploader/font.css';
 import API from '../api';
@@ -14,15 +13,8 @@ export default class MyUploader extends Component {
     _handleSubmit(e) {
         e.preventDefault();
 
-        // const file = {
-        //     file: this.state.file
-        // };
-
         const fd = new FormData();
         fd.append('photo', this.state.file, this.state.file.name);
-
-        // console.log('handle uploading-', this.state.file);
-        // console.log('file :', file);
 
         API.post('post/photo', fd)
         .then(res => {
@@ -79,22 +71,4 @@ export default class MyUploader extends Component {
           </div>
         )
       }
-
-
-//     render() {
-//         return (
-//             <ImagesUploader
-//                 url="http://localhost:8080/api/post/photo"
-//                 optimisticPreviews
-//                 multiple={false}
-//                 inputId="photo"
-//                 onLoadEnd={(err) => {
-//                     if (err) {
-//                         console.error(err);
-//                     }
-//                 }}
-//                 label="Upload a picture"
-//                 />
-//         );
-//     }
  }

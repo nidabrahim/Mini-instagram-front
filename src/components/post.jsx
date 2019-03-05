@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import Images from '../assets/images/images.jpg';
 import Modal from 'react-responsive-modal';
-import Avatar from '../assets/images/avatar.jpg';
 import Comment from './comment';
-import { UserConsumer } from '../providers/userProvider';
 import { PostConsumer, PostContext } from '../providers/postProvider';
-import API from '../api';
-import ImageLoader from 'react-image-file';
 
 
 export default class Post extends Component {
@@ -21,33 +16,6 @@ export default class Post extends Component {
     state = {
         open: false,
     };
-
-    // componentDidMount() {
-    //     console.log(this.context.post.img);
-
-    //     const img = {
-    //         path : this.context.post.img
-    //     }
-
-    //     const access_token = localStorage.getItem("token");
-    //     const config = {
-    //       headers: {
-    //         Authorization: access_token,
-    //         'Content-Type': 'application/json'
-    //       }
-    //     }
-
-    //     API.post("post/path", img, config)
-    //     .then(res => {
-    //         const image = res.data.toString('base64');
-    //         console.log('Image : ',image);
-    //         this.setState({ image : image});
-            
-    //     })
-    //     .catch(function (error) {
-    //     console.log(error);
-    //     })
-    // }
 
     onOpenModal = () => {
         this.setState({ open: true });
@@ -98,11 +66,3 @@ export default class Post extends Component {
     }
 }
 Post.contextType = PostContext;
-
-// const PostProvider = value => (
-//     <PostContext.Provider value={value}>
-//       <Post />
-//     </PostContext.Provider>
-// );
-
-// export default PostProvider

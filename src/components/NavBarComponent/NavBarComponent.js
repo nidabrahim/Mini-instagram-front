@@ -1,10 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './style.css';
-import * as Scroll from 'react-scroll';
 import { Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
-import Routes from '../../routes';
-import { Link, withRouter } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 class NavBarComponent extends Component{
   constructor(props){
@@ -55,7 +52,6 @@ class NavBarComponent extends Component{
     return (
       <nav className={`navbar navbar-expand-lg navbar-light fixed-top ${this.props.navBarShrink}`} id="mainNav">
         <div className="container">
-          {/* <a onClick={this.scrollToTop.bind(this)} className="navbar-brand js-scroll-trigger" href="#page-top">Insta ZZ</a> */}
           <Link className="navbar-brand js-scroll-trigger" to="/">Insta ZZ</Link>
           <button onClick={this.toggleShow.bind(this)} className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
@@ -87,17 +83,9 @@ class NavBarComponent extends Component{
                   </li>
                 </Fragment> 
               }
-
-              {/* <li className="nav-item">
-                <Link activeClass="active" className="nav-link js-scroll-trigger" to="features" spy={true} smooth="easeInOutQuart" duration={1000} >Features</Link>
-              </li>
-              <li className="nav-item">
-                <Link activeClass="active" className="nav-link js-scroll-trigger" to="contact" spy={true} smooth="easeInOutQuart" duration={1000} >Contact</Link>
-              </li> */}
             </ul>
           </div>
         </div>
-       
       </nav>
     );
   }

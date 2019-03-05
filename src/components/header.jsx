@@ -36,7 +36,6 @@ export default class Header extends Component {
                         <img src={CartIcon} width="100"/>
                     </div>
                     <div className="search">
-                        {/* <input type="text" className="searchTerm" placeholder="What are you looking for ?"/> */}
                         <form>
                         <FormGroup
                             controlId="formBasicText"
