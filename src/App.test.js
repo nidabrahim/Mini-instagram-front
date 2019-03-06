@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import LangingPage from './landingPage';
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+   const div = document.createElement('div');
+  // ReactDOM.render(<Router><LangingPage /></Router>, document.getElementById('root'));
+  // ReactDOM.unmountComponentAtNode(div);
 });

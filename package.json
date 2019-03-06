@@ -6,14 +6,19 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "babel-jest": "^24.1.0",
     "cross-env": "^5.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-to-json": "^3.3.5",
     "gh-pages": "^2.0.1",
+    "jest": "^24.1.0",
     "ts-loader": "^5.3.1",
     "typescript": "^3.2.2"
   },
